@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox as mb
 import random
 root = Tk()
 root.title("First, ПЕРВЫЙ!")
@@ -27,13 +28,31 @@ def combine_colors():
 
 
 button = Button(root, command=fnB, text="Butt OFF")
-button.grid()
+button.grid(row=1, column=1)
 
 # button.bind('Button 1', fnB) # 2ой способ забиндить
 
 # это вторая кнопка, отвечает за цвет
 button_hello = Button(root, command=combine_colors, text="Color")
-button_hello.grid()
+button_hello.grid(row=1, column=2)
 root.configure(bg=get_random_color())
-root.mainloop()
 
+
+# кнопка проверяет, являются ли введенные символы числом
+def check():
+    s = entry.get()
+    if s.isdigit() == FALSE:
+        mb.showerror("Ошибка", "Должно быть введено число")
+    else:
+        entry.delete(0, END)
+        label['text'] = s
+
+
+entry = Entry()
+entry.grid(row=2, column=1)
+Button(text='Передать', command=check).grid(row=1, column=3)
+label = Label(height=1)
+label.grid(row=2, column=2)
+
+
+root.mainloop()
