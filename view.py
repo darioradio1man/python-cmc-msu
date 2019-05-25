@@ -6,11 +6,19 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import networkx as nx
 import numpy as np
+import gettext
+import os.path
+import sys
+
+datapath = os.path.dirname(sys.argv[0])
+gettext.install('messages', datapath)
+
 
 matrix = np.zeros((10, 10))
 l = [0] * 10
 f = [0] * 10
 e = [0] * 10
+
 
 class SampleApp(tk.Tk):
 
@@ -19,7 +27,7 @@ class SampleApp(tk.Tk):
 
         self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
 
-        self.title('Graph algorithms visualiser')
+        self.title(_("Graph algorithms visualiser"))
         self.configure(bg='#E1ECED')
         self.geometry("1000x500+300+200")
 
@@ -55,7 +63,7 @@ class StartPage(tk.Frame):
         f = [0] * 10
         e = [0] * 10
         for i in range(0, num):
-            l[i] = tk.Label(self, text='Neighbours of ' + str(i + 1) + 'st vertex:', font='helvetica 15',
+            l[i] = tk.Label(self, text=_("Neighbours of ") + str(i + 1) + _("st vertex:"), font='helvetica 15',
                             fg='#27415D', bd=2)
             f[i] = tk.Frame(self, bg='#92BBBF', width=7, height=1, relief=tk.SUNKEN)
             e[i] = tk.Entry(f[i], fg='#27415D', width=15)
@@ -69,7 +77,7 @@ class StartPage(tk.Frame):
         matrix = np.zeros((n, n))
         for i in range(0, n):
             vertices_list = e[i].get().split(',')
-            for j in range (0, len(vertices_list)):
+            for j in range(0, len(vertices_list)):
                 v = int(vertices_list[j])
                 matrix[i][v - 1] = 1
         flag = 1
@@ -94,13 +102,13 @@ class StartPage(tk.Frame):
         self.controller = controller
         self.configure(bg='#E1ECED')
 
-        label_graph = tk.Label(self, text='Enter number of vertices:', font='helvetica 18', fg='#27415D', bd=2)
+        label_graph = tk.Label(self, text=_("Enter number of vertices:"), font='helvetica 18', fg='#27415D', bd=2)
         label_graph.place(x=40, y=25)
 
         self.frame_number_v = tk.Frame(self, bg='#92BBBF', bd=1)
         self.frame_ok_v = tk.Frame(self, bg='#92BBBF', bd=2)
         self.entry_number_v = tk.Entry(self.frame_number_v, fg='#27415D', width=3)
-        self.button_vertices = tk.Button(self.frame_ok_v, text='Ok!', fg='#27415D', width=4, height=2,
+        self.button_vertices = tk.Button(self.frame_ok_v, text="Ok!", fg='#27415D', width=4, height=2,
                                          command=self.vertices_button)
         self.frame_number_v.place(x=255, y=25)
         self.frame_ok_v.place(x=300, y=22)
@@ -108,17 +116,17 @@ class StartPage(tk.Frame):
         self.button_vertices.grid()
 
         self.frame_ok = tk.Frame(self, bg='#92BBBF', bd=20)
-        self.button_ok = tk.Button(self.frame_ok, text='OK!', fg='#27415D', width=75, height=2, command=self.ok_button)
+        self.button_ok = tk.Button(self.frame_ok, text=_("OK!"), fg='#27415D', width=75, height=2, command=self.ok_button)
         self.frame_ok.place(x=125, y=400)
         self.button_ok.grid()
 
-        self.label_alg = tk.Label(self, text='Choose an algorithm:', font='helvetica 18', fg='#27415D', bd=2)
+        self.label_alg = tk.Label(self, text=_("Choose an algorithm:"), font='helvetica 18', fg='#27415D', bd=2)
         self.label_alg.place(x=500, y=25)
 
         self.var = tk.IntVar()
-        self.rbutton1 = tk.Radiobutton(self, text='Depth-first spanning tree', variable=self.var, value=1)
-        self.rbutton2 = tk.Radiobutton(self, text='Breadth-first spanning tree', variable=self.var, value=2)
-        self.rbutton3 = tk.Radiobutton(self, text='Something =)', variable=self.var, value=3)
+        self.rbutton1 = tk.Radiobutton(self, text=_("Depth-first spanning tree"), variable=self.var, value=1)
+        self.rbutton2 = tk.Radiobutton(self, text=_("Breadth-first spanning tree"), variable=self.var, value=2)
+        self.rbutton3 = tk.Radiobutton(self, text=_("Something =)"), variable=self.var, value=3)
         self.rbutton1.place(x=500, y=75)
         self.rbutton2.place(x=500, y=103)
         self.rbutton3.place(x=500, y=131)
@@ -134,7 +142,7 @@ class PageOne(tk.Frame):
 
         G = nx.from_numpy_matrix(matrix)
         pos = nx.circular_layout(G)
-        nx.draw_networkx(G, pos=pos, ax=a,edge_color='b')
+        nx.draw_networkx(G, pos=pos, ax=a, edge_color='b')
         nx.draw_networkx(nx.dfs_tree(G), pos=pos, ax=a, edge_color='r')
         canvas = FigureCanvasTkAgg(f, master=self)
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
@@ -144,16 +152,14 @@ class PageOne(tk.Frame):
         self.controller = controller
         self.configure(bg='#E1ECED')
 
-        label = tk.Label(self, text="Method 1", font=controller.title_font)
+        label = tk.Label(self, text=_("Method 1"), font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Again!",
+        button = tk.Button(self, text=_("Again!"),
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
-        button = tk.Button(self, text="Use Method!",
+        button = tk.Button(self, text=_("Use Method!"),
                            command=self.use_method)
         button.pack()
-
-
 
 
 class PageTwo(tk.Frame):
@@ -166,8 +172,8 @@ class PageTwo(tk.Frame):
 
         G = nx.from_numpy_matrix(matrix)
         pos = nx.circular_layout(G)
-        nx.draw_networkx(G, pos=pos, ax=a,edge_color='b')
-        nx.draw_networkx(nx.bfs_tree(G,0), pos=pos, ax=a, edge_color='r')
+        nx.draw_networkx(G, pos=pos, ax=a, edge_color='b')
+        nx.draw_networkx(nx.bfs_tree(G, 0), pos=pos, ax=a, edge_color='r')
         canvas = FigureCanvasTkAgg(f, master=self)
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
@@ -176,14 +182,15 @@ class PageTwo(tk.Frame):
         self.controller = controller
         self.configure(bg='#E1ECED')
 
-        label = tk.Label(self, text="Method 2", font=controller.title_font)
+        label = tk.Label(self, text=_("Method 2"), font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Again!",
+        button = tk.Button(self, text=_("Again!"),
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
-        button = tk.Button(self, text="Use Method!",
+        button = tk.Button(self, text=_("Use Method!"),
                            command=self.use_method)
         button.pack()
+
 
 class PageThree(tk.Frame):
 
@@ -192,11 +199,12 @@ class PageThree(tk.Frame):
         self.controller = controller
         self.configure(bg='#E1ECED')
 
-        label = tk.Label(self, text="Method 3", font=controller.title_font)
+        label = tk.Label(self, text=_("Method 3"), font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Again!",
+        button = tk.Button(self, text=_("Again!"),
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
+
 
 class ErrorPage(tk.Frame):
 
@@ -205,11 +213,11 @@ class ErrorPage(tk.Frame):
         self.controller = controller
         self.configure(bg='#E1ECED')
 
-        label = tk.Label(self, text="Error! Please return and check if all the parameters are valid.",
+        label = tk.Label(self, text=_("Error! Please return and check if all the parameters are valid."),
                          font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="Return!",
-                            command=lambda: controller.show_frame("StartPage"))
+                           command=lambda: controller.show_frame("StartPage"))
         button.pack()
 
 
