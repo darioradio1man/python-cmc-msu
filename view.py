@@ -64,8 +64,7 @@ class StartPage(tk.Frame):
         f = [0] * 10
         e = [0] * 10
         for i in range(0, num):
-            l[i] = tk.Label(self, text=_("Neighbours of ") + str(i + 1)
-                            + _("st vertex:"),
+            l[i] = tk.Label(self, text=_("Neighbours of ") + str(i + 1) + _("st vertex:"),
                             font='helvetica 15', fg='#27415D', bd=2)
             f[i] = tk.Frame(self, bg='#92BBBF', width=7, height=1, relief=tk.SUNKEN)
             e[i] = tk.Entry(f[i], fg='#27415D', width=15)
