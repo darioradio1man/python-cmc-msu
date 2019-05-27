@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-05-25 19:24+MSK\n"
+"POT-Creation-Date: 2019-05-27 13:39+MSK\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,63 +15,67 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: view.py:30
+#: view.py:31
 msgid "Graph algorithms visualiser"
 msgstr ""
 
-#: view.py:66
+#: view.py:67
 msgid "Neighbours of "
 msgstr ""
 
-#: view.py:66
+#: view.py:68
 msgid "st vertex:"
 msgstr ""
 
-#: view.py:105
+#: view.py:107
 msgid "Enter number of vertices:"
 msgstr ""
 
-#: view.py:119
+#: view.py:124
 msgid "OK!"
 msgstr ""
 
-#: view.py:123
+#: view.py:129
 msgid "Choose an algorithm:"
 msgstr ""
 
-#: view.py:127
+#: view.py:134
 msgid "Depth-first spanning tree"
 msgstr ""
 
-#: view.py:128
+#: view.py:136
 msgid "Breadth-first spanning tree"
 msgstr ""
 
-#: view.py:129
+#: view.py:138
 msgid "Something =)"
 msgstr ""
 
-#: view.py:155
+#: view.py:165
 msgid "Method 1"
 msgstr ""
 
-#: view.py:157 view.py:187 view.py:204
+#: view.py:167 view.py:197 view.py:214
 msgid "Again!"
 msgstr ""
 
-#: view.py:160 view.py:190
+#: view.py:170 view.py:200
 msgid "Use Method!"
 msgstr ""
 
-#: view.py:185
+#: view.py:195
 msgid "Method 2"
 msgstr ""
 
-#: view.py:202
+#: view.py:212
 msgid "Method 3"
 msgstr ""
 
-#: view.py:216
+#: view.py:226
 msgid "Error! Please return and check if all the parameters are valid."
+msgstr ""
+
+#: view.py:230
+msgid "Return!"
 msgstr ""
 
