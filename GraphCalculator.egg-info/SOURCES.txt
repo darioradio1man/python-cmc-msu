@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+GraphCalculator/GraphCalculator.py
+GraphCalculator/__init__.py
+GraphCalculator.egg-info/PKG-INFO
+GraphCalculator.egg-info/SOURCES.txt
+GraphCalculator.egg-info/dependency_links.txt
+GraphCalculator.egg-info/requires.txt
+GraphCalculator.egg-info/top_level.txt

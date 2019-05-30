@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: GraphCalculator
+Version: 0.0.1
+Summary: Python3 project
+Home-page: https://github.com/darioradio1man/python-cmc-msu
+Author: Ildar Kharrasov, Stanislav Kitaev, Anastasia Mazurenko
+Author-email: kharrasov.radiokha94@yandex.ru
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-05-27 13:39+MSK\n"
-"PO-Revision-Date: 2019-05-27 13:53+0300\n"
+"POT-Creation-Date: 2019-05-30 22:39+MSK\n"
+"PO-Revision-Date: 2019-05-30 22:41+0300\n"
 "Last-Translator: dario <kharrasov.radiokha94@yandex.ru>\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -17,66 +17,66 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: view.py:31
+#: GraphCalculator.py:31
 msgid "Graph algorithms visualiser"
 msgstr "Визуализатор алгоритмов на графах"
 
-#: view.py:67
+#: GraphCalculator.py:67
 msgid "Neighbours of "
 msgstr "Вершины, смежные с"
 
-#: view.py:68
+#: GraphCalculator.py:67
 msgid "st vertex:"
 msgstr "-й вершиной"
 
-#: view.py:107
+#: GraphCalculator.py:106
 msgid "Enter number of vertices:"
-msgstr "Введите количество вершин:"
+msgstr "Введите количество вершин"
 
-#: view.py:124
+#: GraphCalculator.py:114 GraphCalculator.py:123
 msgid "OK!"
 msgstr "ОК!"
 
-#: view.py:129
+#: GraphCalculator.py:128
 msgid "Choose an algorithm:"
 msgstr "Выберите алгоритм:"
 
-#: view.py:134
+#: GraphCalculator.py:133
 msgid "Depth-first spanning tree"
 msgstr "Построение остовного дерева поиском в глубину"
 
-#: view.py:136
+#: GraphCalculator.py:135
 msgid "Breadth-first spanning tree"
 msgstr "Построение остовного дерева поиском в ширину"
 
-#: view.py:138
+#: GraphCalculator.py:137
 msgid "Something =)"
 msgstr "Еще что-то)"
 
-#: view.py:165
+#: GraphCalculator.py:164
 msgid "Method 1"
 msgstr "Метод 1"
 
-#: view.py:167 view.py:197 view.py:214
+#: GraphCalculator.py:166 GraphCalculator.py:196 GraphCalculator.py:213
 msgid "Again!"
 msgstr "Еще раз!"
 
-#: view.py:170 view.py:200
+#: GraphCalculator.py:169 GraphCalculator.py:199
 msgid "Use Method!"
 msgstr "Использовать метод!"
 
-#: view.py:195
+#: GraphCalculator.py:194
 msgid "Method 2"
 msgstr "Метод 2"
 
-#: view.py:212
+#: GraphCalculator.py:211
 msgid "Method 3"
 msgstr "Метод 3"
 
-#: view.py:226
+#: GraphCalculator.py:225
 msgid "Error! Please return and check if all the parameters are valid."
 msgstr "Ошибка! Вернитесь и проверьте, все ли правильно введено"
 
-#: view.py:230
+#: GraphCalculator.py:229
 msgid "Return!"
 msgstr "Вернуться!"
