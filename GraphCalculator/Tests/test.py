@@ -7,7 +7,7 @@ import networkx as nx
 class TestStringMethods(unittest.TestCase):
 
     def test_dfs1(self):
-        sample = SampleApp()
+        sample = tmp.SampleApp()
         page = tmp.PageOne(sample, sample)
         matrix = np.matrix([[1, 0], [0, 1]])
         G = nx.from_numpy_matrix(matrix)

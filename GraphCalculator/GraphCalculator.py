@@ -143,13 +143,13 @@ class StartPage(tk.Frame):
 
 class PageOne(tk.Frame):
 
-    def use_method(self):
+    def use_method(self, m):
         global matrix
         f = plt.figure(figsize=(5, 4))
         a = f.add_subplot(111)
         plt.axis('off')
 
-        G = nx.from_numpy_matrix(matrix)
+        G = nx.from_numpy_matrix(m)
         pos = nx.circular_layout(G)
         nx.draw_networkx(G, pos=pos, ax=a, edge_color='b')
         nx.draw_networkx(nx.dfs_tree(G), pos=pos, ax=a, edge_color='r')
@@ -175,13 +175,13 @@ class PageOne(tk.Frame):
 
 class PageTwo(tk.Frame):
 
-    def use_method(self):
+    def use_method(self, m):
         global matrix
         f = plt.figure(figsize=(5, 4))
         a = f.add_subplot(111)
         plt.axis('off')
 
-        G = nx.from_numpy_matrix(matrix)
+        G = nx.from_numpy_matrix(m)
         pos = nx.circular_layout(G)
         nx.draw_networkx(G, pos=pos, ax=a, edge_color='b')
         nx.draw_networkx(nx.bfs_tree(G, 0), pos=pos, ax=a, edge_color='r')
