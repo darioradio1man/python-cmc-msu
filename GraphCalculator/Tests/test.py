@@ -174,6 +174,6 @@ class TestStringMethods(unittest.TestCase):
 
         self.assertEqual(g1, g2)
 
+
 if __name__ == '__main__':
     unittest.main()
-
