@@ -6,7 +6,7 @@ from os import path
 datapath = Path(__file__).parent.resolve()
 
 with open(datapath / "README.md") as file:
-    long_decription = file.read()
+    long_description = file.read()
 
 setup(
     name='GraphCalculator',
@@ -14,8 +14,9 @@ setup(
     author='Ildar Kharrasov, Stanislav Kitaev, Anastasia Mazurenko',
     author_email='kharrasov.radiokha94@yandex.ru',
     description='Python3 project',
-    long_decription=long_decription,
-    packages=find_packages(exclude=['Tests']),
+    long_description=long_description,
+    packages=find_packages(),
+    setup_require=["mo_installer"],
     url='https://github.com/darioradio1man/python-cmc-msu',
     classifiers=[
         'Programming Language :: Python :: 3.5',
@@ -30,5 +31,5 @@ setup(
     ],
     locale_src='./GraphCalculator/ru/LC_MESSAGES',
     package_data={'': '*'},
-    include_package_data=True,
+    include_package_data=False,
 ),

@@ -25,7 +25,7 @@ class SampleApp(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        self.title_font = tkfont.Font(family='Helvetica', size=18,
+        self.title_font = tkfont.Font(family='Helvetica', size=15,
                                       weight="bold", slant="italic")
 
         self.title(_("Graph algorithms visualiser"))
@@ -153,10 +153,12 @@ class PageOne(tk.Frame):
         pos = nx.circular_layout(G)
         nx.draw_networkx(G, pos=pos, ax=a, edge_color='b')
         nx.draw_networkx(nx.dfs_tree(G), pos=pos, ax=a, edge_color='r')
+        self.result = nx.dfs_tree(G)
         canvas = FigureCanvasTkAgg(f, master=self)
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
     def __init__(self, parent, controller):
+        global matrix
         tk.Frame.__init__(self, parent)
         self.controller = controller
         self.configure(bg='#E1ECED')
@@ -167,7 +169,7 @@ class PageOne(tk.Frame):
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
         button = tk.Button(self, text=_("Use Method!"),
-                           command=self.use_method)
+                           command=lambda: self.use_method(matrix))
         button.pack()
 
 
@@ -183,10 +185,12 @@ class PageTwo(tk.Frame):
         pos = nx.circular_layout(G)
         nx.draw_networkx(G, pos=pos, ax=a, edge_color='b')
         nx.draw_networkx(nx.bfs_tree(G, 0), pos=pos, ax=a, edge_color='r')
+        self.result = nx.bfs_tree(G, 0)
         canvas = FigureCanvasTkAgg(f, master=self)
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
     def __init__(self, parent, controller):
+        global matrix
         tk.Frame.__init__(self, parent)
         self.controller = controller
         self.configure(bg='#E1ECED')
@@ -197,7 +201,7 @@ class PageTwo(tk.Frame):
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
         button = tk.Button(self, text=_("Use Method!"),
-                           command=self.use_method)
+                           command= lambda: self.use_method(matrix))
         button.pack()
 
 
