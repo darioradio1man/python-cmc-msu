@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-05-30 22:39+MSK\n"
+"POT-Creation-Date: 2019-06-02 19:48+MSK\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,31 +51,31 @@ msgstr ""
 msgid "Something =)"
 msgstr ""
 
-#: GraphCalculator.py:164
+#: GraphCalculator.py:166
 msgid "Method 1"
 msgstr ""
 
-#: GraphCalculator.py:166 GraphCalculator.py:196 GraphCalculator.py:213
+#: GraphCalculator.py:169 GraphCalculator.py:204 GraphCalculator.py:224
 msgid "Again!"
 msgstr ""
 
-#: GraphCalculator.py:169 GraphCalculator.py:199
+#: GraphCalculator.py:173 GraphCalculator.py:208
 msgid "Use Method!"
 msgstr ""
 
-#: GraphCalculator.py:194
+#: GraphCalculator.py:201
 msgid "Method 2"
 msgstr ""
 
-#: GraphCalculator.py:211
+#: GraphCalculator.py:221
 msgid "Method 3"
 msgstr ""
 
-#: GraphCalculator.py:225
+#: GraphCalculator.py:237
 msgid "Error! Please return and check if all the parameters are valid."
 msgstr ""
 
-#: GraphCalculator.py:229
+#: GraphCalculator.py:241
 msgid "Return!"
 msgstr ""
 

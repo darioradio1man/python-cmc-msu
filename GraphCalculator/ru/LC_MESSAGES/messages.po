@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-05-30 22:39+MSK\n"
-"PO-Revision-Date: 2019-05-30 22:41+0300\n"
+"POT-Creation-Date: 2019-06-02 19:48+MSK\n"
+"PO-Revision-Date: 2019-06-02 19:49+0300\n"
 "Last-Translator: dario <kharrasov.radiokha94@yandex.ru>\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -23,15 +23,15 @@ msgstr "Визуализатор алгоритмов на графах"
 
 #: GraphCalculator.py:67
 msgid "Neighbours of "
-msgstr "Вершины, смежные с"
+msgstr "Соседи "
 
 #: GraphCalculator.py:67
 msgid "st vertex:"
-msgstr "-й вершиной"
+msgstr "-й вершины"
 
 #: GraphCalculator.py:106
 msgid "Enter number of vertices:"
-msgstr "Введите количество вершин"
+msgstr "Количество вершин: "
 
 #: GraphCalculator.py:114 GraphCalculator.py:123
 msgid "OK!"
@@ -43,40 +43,40 @@ msgstr "Выберите алгоритм:"
 
 #: GraphCalculator.py:133
 msgid "Depth-first spanning tree"
-msgstr "Построение остовного дерева поиском в глубину"
+msgstr "Поиск в глубину"
 
 #: GraphCalculator.py:135
 msgid "Breadth-first spanning tree"
-msgstr "Построение остовного дерева поиском в ширину"
+msgstr "Поиск в ширину"
 
 #: GraphCalculator.py:137
 msgid "Something =)"
-msgstr "Еще что-то)"
+msgstr "Еще что-то"
 
-#: GraphCalculator.py:164
+#: GraphCalculator.py:166
 msgid "Method 1"
 msgstr "Метод 1"
 
-#: GraphCalculator.py:166 GraphCalculator.py:196 GraphCalculator.py:213
+#: GraphCalculator.py:169 GraphCalculator.py:204 GraphCalculator.py:224
 msgid "Again!"
 msgstr "Еще раз!"
 
-#: GraphCalculator.py:169 GraphCalculator.py:199
+#: GraphCalculator.py:173 GraphCalculator.py:208
 msgid "Use Method!"
 msgstr "Использовать метод!"
 
-#: GraphCalculator.py:194
+#: GraphCalculator.py:201
 msgid "Method 2"
 msgstr "Метод 2"
 
-#: GraphCalculator.py:211
+#: GraphCalculator.py:221
 msgid "Method 3"
 msgstr "Метод 3"
 
-#: GraphCalculator.py:225
+#: GraphCalculator.py:237
 msgid "Error! Please return and check if all the parameters are valid."
-msgstr "Ошибка! Вернитесь и проверьте, все ли правильно введено"
+msgstr "Ошиька! Вернитесь и проверьте, все ли правильно."
 
-#: GraphCalculator.py:229
+#: GraphCalculator.py:241
 msgid "Return!"
-msgstr "Вернуться!"
+msgstr "Назад!"
