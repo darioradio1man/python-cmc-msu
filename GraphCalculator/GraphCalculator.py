@@ -65,7 +65,7 @@ class StartPage(tk.Frame):
         e = [0] * 10
         for i in range(0, num):
             l[i] = tk.Label(self, text=_("Neighbours of ") + str(i + 1) + _("st vertex:"),
-                            font='helvetica 12', fg='#27415D', bd=2, bg='white')
+                            font='helvetica 12', fg='#27415D', bd=2, bg='#E1ECED')
             f[i] = tk.Frame(self, bg='#92BBBF', width=7, height=1, relief=tk.SUNKEN)
             e[i] = tk.Entry(f[i], fg='#27415D', width=15)
             l[i].grid(row=(i+1), column=0)
@@ -104,7 +104,7 @@ class StartPage(tk.Frame):
         self.configure(bg='#E1ECED')
 
         label_graph = tk.Label(self, text=_("Enter number of vertices:"),
-                               font='helvetica 12', fg='#27415D', bd=2)
+                               font='helvetica 12', fg='#27415D', bg='#E1ECED', bd=2)
         label_graph.grid(row=0, column=0, columnspan=3, pady=30)
 
         self.frame_number_v = tk.Frame(self, bg='#92BBBF', bd=1)
@@ -113,6 +113,7 @@ class StartPage(tk.Frame):
                                        width=15)
         self.button_vertices = tk.Button(self.frame_ok_v, text=_("OK!"),
                                          fg='#27415D', width=4, height=2, bg='white',
+                                         font='helvetica 12',
                                          command=self.vertices_button)
         self.frame_number_v.grid(row=0, column=3)
         self.frame_ok_v.grid(row=0, column=4)
@@ -121,24 +122,28 @@ class StartPage(tk.Frame):
 
         self.frame_ok = tk.Frame(self, bg='#92BBBF', bd=20)
         self.button_ok = tk.Button(self.frame_ok, text=_("OK!"), fg='#27415D', bg='white',
-                                   width=75, height=2, command=self.ok_button)
-        self.frame_ok.place(x=125, y=400)
+                                   width=75, height=2, font='helvetica 12',
+                                   command=self.ok_button)
+        self.frame_ok.place(x=180, y=400)
         self.button_ok.grid()
 
-        self.label_alg = tk.Label(self, text=_("Choose an algorithm:"),
+        self.label_alg = tk.Label(self, text=_("Choose an algorithm:"), bg='#E1ECED',
                                   font='helvetica 12', fg='#27415D', bd=2)
-        self.label_alg.place(x=500, y=25)
+        self.label_alg.place(x=570, y=25)
 
         self.var = tk.IntVar()
         self.rbutton1 = tk.Radiobutton(self, text=_("Depth-first spanning tree"),
-                                       variable=self.var, value=1)
+                                       variable=self.var, value=1,
+                                       bg='#E1ECED', font='helvetica 11', fg='#27415D')
         self.rbutton2 = tk.Radiobutton(self, text=_("Breadth-first spanning tree"),
-                                       variable=self.var, value=2)
+                                       variable=self.var, value=2,
+                                       bg='#E1ECED', font='helvetica 11', fg='#27415D')
         self.rbutton3 = tk.Radiobutton(self, text=_("Something =)"),
-                                       variable=self.var, value=3)
-        self.rbutton1.place(x=500, y=75)
-        self.rbutton2.place(x=500, y=103)
-        self.rbutton3.place(x=500, y=131)
+                                       variable=self.var, value=3,
+                                       bg='#E1ECED', font='helvetica 11', fg='#27415D')
+        self.rbutton1.place(x=570, y=75)
+        self.rbutton2.place(x=570, y=103)
+        self.rbutton3.place(x=570, y=131)
 
 
 class PageOne(tk.Frame):
@@ -164,7 +169,7 @@ class PageOne(tk.Frame):
         self.configure(bg='#E1ECED')
 
         label = tk.Label(self, text=_("Method 1"), font='helvetica 12',
-                         fg='#27415D', bg='white')
+                         fg='#27415D', bg='#E1ECED')
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text=_("Again!"), font='helvetica 12',
                            fg='#27415D', bg='white',
@@ -199,7 +204,7 @@ class PageTwo(tk.Frame):
         self.configure(bg='#E1ECED')
 
         label = tk.Label(self, text=_("Method 2"), font='helvetica 12',
-                         fg='#27415D', bg='white')
+                         fg='#27415D', bg='#E1ECED')
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text=_("Again!"), font='helvetica 12',
                            fg='#27415D', bg='white',
@@ -219,7 +224,7 @@ class PageThree(tk.Frame):
         self.configure(bg='#E1ECED')
 
         label = tk.Label(self, text=_("Method 3"),
-                         font='helvetica 15', fg='#27415D', bg='white')
+                         font='helvetica 15', fg='#27415D', bg='#E1ECED')
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text=_("Again!"),
                            font='helvetica 12', fg='#27415D', bg='white',
@@ -236,7 +241,7 @@ class ErrorPage(tk.Frame):
 
         label = tk.Label(self, text=_("Error! Please return and check if all the "
                                       "parameters are valid."),
-                         font='helvetica 12', fg='#27415D', bg='white')
+                         font='helvetica 12', fg='#27415D', bg='#E1ECED')
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text=_("Return!"),
                            font='helvetica 12', fg='#27415D', bg='white',
