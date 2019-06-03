@@ -5,7 +5,7 @@ from os import path
 
 datapath = Path(__file__).parent.resolve()
 
-with open(datapath / "README.md") as file:
+with open(datapath / "README.md", encoding="utf8") as file:
     long_description = file.read()
 
 setup(
@@ -32,5 +32,5 @@ setup(
     package_data={'': '*'},
     include_package_data=False,
     setup_require=["mo_installer"],
-    locale_src="./GraphCalculator/locale/ru/LC_MESSAGES",
+    #locale_src="./GraphCalculator/locale/ru/LC_MESSAGES",
 ),
