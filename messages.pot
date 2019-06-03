@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-06-02 19:48+MSK\n"
+"POT-Creation-Date: 2019-06-03 17:34+MSK\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,67 +15,68 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: GraphCalculator.py:31
+#: ./GraphCalculator/__main__.py:30
 msgid "Graph algorithms visualiser"
 msgstr ""
 
-#: GraphCalculator.py:67
+#: ./GraphCalculator/__main__.py:66
 msgid "Neighbours of "
 msgstr ""
 
-#: GraphCalculator.py:67
+#: ./GraphCalculator/__main__.py:66
 msgid "st vertex:"
 msgstr ""
 
-#: GraphCalculator.py:106
+#: ./GraphCalculator/__main__.py:105
 msgid "Enter number of vertices:"
 msgstr ""
 
-#: GraphCalculator.py:114 GraphCalculator.py:123
+#: ./GraphCalculator/__main__.py:113 ./GraphCalculator/__main__.py:123
 msgid "OK!"
 msgstr ""
 
-#: GraphCalculator.py:128
+#: ./GraphCalculator/__main__.py:129
 msgid "Choose an algorithm:"
 msgstr ""
 
-#: GraphCalculator.py:133
+#: ./GraphCalculator/__main__.py:134
 msgid "Depth-first spanning tree"
 msgstr ""
 
-#: GraphCalculator.py:135
+#: ./GraphCalculator/__main__.py:137
 msgid "Breadth-first spanning tree"
 msgstr ""
 
-#: GraphCalculator.py:137
+#: ./GraphCalculator/__main__.py:140
 msgid "Something =)"
 msgstr ""
 
-#: GraphCalculator.py:166
+#: ./GraphCalculator/__main__.py:170
 msgid "Method 1"
 msgstr ""
 
-#: GraphCalculator.py:169 GraphCalculator.py:204 GraphCalculator.py:224
+#: ./GraphCalculator/__main__.py:173 ./GraphCalculator/__main__.py:208
+#: ./GraphCalculator/__main__.py:228
 msgid "Again!"
 msgstr ""
 
-#: GraphCalculator.py:173 GraphCalculator.py:208
+#: ./GraphCalculator/__main__.py:177 ./GraphCalculator/__main__.py:212
 msgid "Use Method!"
 msgstr ""
 
-#: GraphCalculator.py:201
+#: ./GraphCalculator/__main__.py:205
 msgid "Method 2"
 msgstr ""
 
-#: GraphCalculator.py:221
+#: ./GraphCalculator/__main__.py:225
 msgid "Method 3"
 msgstr ""
 
-#: GraphCalculator.py:237
+#: ./GraphCalculator/__main__.py:241
 msgid "Error! Please return and check if all the parameters are valid."
 msgstr ""
 
-#: GraphCalculator.py:241
+#: ./GraphCalculator/__main__.py:245
 msgid "Return!"
 msgstr ""
 

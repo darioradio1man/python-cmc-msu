@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-import GraphCalculator.GraphCalculator as tmp
+import GraphCalculator.__main__ as tmp
 import networkx as nx
 
 

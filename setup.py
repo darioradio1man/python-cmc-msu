@@ -16,12 +16,12 @@ setup(
     description='Python3 project',
     long_description=long_description,
     packages=find_packages(),
-    setup_require=["mo_installer"],
     url='https://github.com/darioradio1man/python-cmc-msu',
     classifiers=[
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        "Operating System :: OS Independent",
     ],
     install_requires=[
         'matplotlib==3.1.0',
@@ -29,7 +29,8 @@ setup(
         'networkx==2.3',
         'flake8-per-file-ignores==0.8.1',
     ],
-    locale_src='./GraphCalculator/ru/LC_MESSAGES',
     package_data={'': '*'},
     include_package_data=False,
+    setup_require=["mo_installer"],
+    locale_src="./GraphCalculator/locale/ru/LC_MESSAGES",
 ),

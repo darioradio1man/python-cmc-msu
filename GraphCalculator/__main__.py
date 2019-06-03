@@ -10,8 +10,7 @@ import gettext
 import os.path
 import sys
 
-datapath = os.path.dirname(sys.argv[0])
-gettext.install('messages', datapath)
+gettext.install("messages", os.path.join(os.path.dirname(__file__), 'locale'))
 
 
 matrix = np.zeros((10, 10))
@@ -252,3 +251,5 @@ class ErrorPage(tk.Frame):
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
+
+

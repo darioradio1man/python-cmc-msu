@@ -1,10 +1,8 @@
 README.md
 setup.cfg
 setup.py
-GraphCalculator/Activity Graph.png
-GraphCalculator/Graph Calculator.png
-GraphCalculator/GraphCalculator.py
 GraphCalculator/__init__.py
+GraphCalculator/__main__.py
 GraphCalculator/messages.pot
 GraphCalculator.egg-info/PKG-INFO
 GraphCalculator.egg-info/SOURCES.txt

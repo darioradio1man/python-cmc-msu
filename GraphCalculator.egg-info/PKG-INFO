@@ -27,7 +27,17 @@ Description: # python-cmc-msu
         3.1) При нажатии клавиши "Еще раз" она возращает в стартовую позицию, где выбирается алгоритм и ввод вершин.
         3.2) При нажатии клавиши "Использовать метод" она визуализирует данный алгоритм.
         
+        Как запускать:
+        1) скачиваете zip-файл, и извлекаете его в папку
+        2) переходите в файл "GraphCalculator", открываете терминал в папке
+        3) пишите python3 GraphCalculator.py
+        P.S. также в данной папке есть .whl-файл, но я там что-то не так сделал, поэтому там модуль не поставился
+        
+        Как запускать тесты:
+        1)
+        
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3.5
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
