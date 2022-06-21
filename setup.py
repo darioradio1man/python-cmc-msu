@@ -25,7 +25,7 @@ setup(
     ],
     install_requires=[
         'matplotlib==3.1.0',
-        'numpy==1.16.4',
+        'numpy==1.22.0',
         'networkx==2.3',
         'flake8-per-file-ignores==0.8.1',
     ],
